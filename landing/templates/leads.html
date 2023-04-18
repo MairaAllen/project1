@@ -1,0 +1,16 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block content %}
+<div class="columns is-multiline is-centered">
+    {% for lead in leads %}
+    <div class="column">
+        <div class="title is-4 has-text-black mt-6">{{lead.name}}{{lead.last_name}}</div>
+        <div class="subtitle is-spaced has-text-black">{{lead.phone_number}}</div>
+        <div class="subtitle is-spaced has-text-black">{{lead.course}}</div>
+            <div class="box has-text-centered"></div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
